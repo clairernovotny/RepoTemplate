@@ -66,11 +66,11 @@ Function Unzip
 
 
 # Make sure Cake has been installed.
-$CakePath = Join-Path $ToolPath "Cake.CoreCLR.$CakeVersion/Cake.dll"
+$CakePath = Join-Path $ToolPath "Cake.CoreCLR/Cake.dll"
 if (!(Test-Path $CakePath)) {
     Write-Host "Installing Cake..."
      (New-Object System.Net.WebClient).DownloadFile("https://www.nuget.org/api/v2/package/Cake.CoreCLR/$CakeVersion", "$ToolPath\Cake.CoreCLR.zip")
-     Unzip "$ToolPath\Cake.CoreCLR.zip" "$ToolPath/Cake.CoreCLR.$CakeVersion"
+     Unzip "$ToolPath\Cake.CoreCLR.zip" "$ToolPath/Cake.CoreCLR"
      Remove-Item "$ToolPath\Cake.CoreCLR.zip"
 }
 
