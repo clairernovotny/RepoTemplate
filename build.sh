@@ -8,6 +8,7 @@
 # Define directories.
 SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 TOOLS_DIR=$SCRIPT_DIR/tools
+NUGET_EXE=$TOOLS_DIR/nuget.exe
 CAKE_VERSION=0.16.2
 CAKE_DLL=$TOOLS_DIR/Cake.CoreCLR/Cake.dll
 
@@ -31,6 +32,19 @@ export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 "$SCRIPT_DIR/.dotnet/dotnet" --info
 
+###########################################################################
+# INSTALL NUGET
+###########################################################################
+
+# Download NuGet if it does not exist.
+if [ ! -f "$NUGET_EXE" ]; then
+    echo "Downloading NuGet..."
+    curl -Lsfo "$NUGET_EXE" $NUGET_URL
+    if [ $? -ne 0 ]; then
+        echo "An error occured while downloading nuget.exe."
+        exit 1
+    fi
+fi
 
 ###########################################################################
 # INSTALL CAKE
