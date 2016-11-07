@@ -1,0 +1,27 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "xunit": "2.2.0-beta3-build3402",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
+  },
+
+  "testRunner": "xunit",
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "HelloRepo": {
+          "target": "project"
+        },
+        "Microsoft.NETCore.App": {
+          "version": "1.0.1",
+          "type": "platform"
+        }
+      },
+      "buildOptions": {
+        "define": [ "NETFX_CORE" ]
+      }
+    }
+  }
+}

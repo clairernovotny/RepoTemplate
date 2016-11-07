@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "exports": {
+    "HelloRepo/1.0.0": {
+      "type": "project",
+      "framework": ".NETStandard,Version=v1.1",
+      "compile": {
+        "bin/Debug/HelloRepo.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/HelloRepo.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/HelloRepo.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
