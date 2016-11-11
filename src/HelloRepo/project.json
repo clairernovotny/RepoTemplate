@@ -1,5 +1,41 @@
 ﻿{
+  "version": "0.1.0-*",
+  "description": "Sample",
+  "copyright": "© Oren Novotny 2016",
+  "authors": [
+    "Oren Novotny"
+  ],
+  "packOptions": {
+    "summary": "Sample",
+    "projectUrl": "https://github.com/onovotny/RepoTemplate",
+    "licenseUrl": "https://github.com/onovotny/RepoTemplate/blob/master/LICENSE",
+    "iconUrl": "",
+    "releaseNotes": "Initial Release",
+    "requireLicenseAcceptance": false,
+    "tags": [
+      "Cake",
+      "Sample",
+      "Build"
+    ],
+    "owners": [
+      "onovotny"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/onovotny/RepoTemplate"
+    }
+  },
   "supports": {},
+  "buildOptions": {
+    "debugType": "portable",
+    "xmlDoc": true,
+    "platform": "anycpu",
+    "compile": {
+      "includeFiles": [
+        "../SolutionInfo.cs"
+      ]
+    }
+  },
   "dependencies": {
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "1.6.0"
