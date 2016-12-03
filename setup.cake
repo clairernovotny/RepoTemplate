@@ -35,17 +35,17 @@ var sendMessageToTwitter = false;
 
 var rootDirectoryPath         = MakeAbsolute(Context.Environment.WorkingDirectory);
 var sourceDirectoryPath       = "./src";
-var solutionFilePath          = "./src/HelloRepo.sln";
+var solutionFilePath          = "./RepoTemplate.sln";
 var solutionDirectoryPath     = "./src/HelloRepo";
-var title                     = "HelloRepo";
-var resharperSettingsFileName = "HelloRepo.sln.DotSettings";
+var title                     = "RepoTemplate";
+var resharperSettingsFileName = "RepoTemplate.sln.DotSettings";
 var repositoryOwner           = "onovotny";
 var repositoryName            = "RepoTemplate";
 var appVeyorAccountName       = "onovotny";
-var appVeyorProjectSlug       = "HelloRepo";
+var appVeyorProjectSlug       = "RepoTemplate";
 
 // NOTE: Only populate this, if required, but leave as is otherwise.
-var dupFinderExcludePattern   = new string[] { rootDirectoryPath + "/Source/Cake.CakeMail.Tests/*.cs" };
+var dupFinderExcludePattern   = new string[] { rootDirectoryPath + "/src/test/HelloRepo.Tests/*.cs" };
 var testCoverageFilter = "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* ";
 var testCoverageExcludeByAttribute = "*.ExcludeFromCodeCoverage*";
 var testCoverageExcludeByFile = "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs";
